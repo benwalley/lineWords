@@ -2,32 +2,103 @@
 <html>
 <head>
 	<title>Words</title>
+
+	<link rel="stylesheet" type="text/css" href="words.css">
+
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous">
+	</script>
 </head>
 <body >
-	<style type="text/css">
-		body{
-			margin:0;
-			overflow:hidden;
-		}
-		#wordsCanvas{
-			position:absolute;
-			top:0;
-			left:0;
-			background:black;
-
-		}
-
-		#backgroundCanvas{
-			position:absolute;
-			top:0;
-			left:0;
-
-		}
-	</style>
 	<canvas id = "backgroundCanvas"></canvas>
-<canvas id = "wordsCanvas"></canvas>	
+	<canvas id = "wordsCanvas"></canvas>	
+	
+	
+	<div class = "settingsContainer">
 
 	
+		<input type="button" value = "reset" class = "button reset" id = "resetButton">
+		<input type="button" value = "start" class = "button start" id = "startButton">
+	
+	
+
+		<div class = "dataContainer textContainer">
+			<div class = "numberData" >Word</div>
+			<input type="text" class = "word text" value = "TEST" id = "wordInput">
+		</div>
+
+		<div class = "dataContainer textContainer">
+			<div class = "numberData">Number of dots created</div>
+			<input type="text" class = "numberDots text" value = "200" id = "numberInput">
+		</div>
+<hr>
+
+		<div class = "dataContainer checkContainer">
+			<div class = "checkData">show dots</div>
+			<input type="checkbox" class = "checkbox" checked id = "showDotsInput">
+		</div>
+	
+		<div class = "dataContainer checkContainer">
+			<div class = "checkData">show Lines</div>
+			<input type="checkbox" class = "checkbox" checked id = "showLinesInput">
+		</div>
+
+<hr>
+		<div class = "dataContainer colorContainer">
+			<div class = "colorData">background color</div>
+			<input type="color" class = "color"  value = "#aaaaaa" id = "backgroundColorInput">
+		</div>
+	<hr>
+		<div class = "dataContainer colorContainer">
+			<div class = "colorData">ball color</div>
+			<input type="color" class = "color"  value = "#aaaaaa" id = "ballColorInput">
+		</div>
+		<hr>
+			<div class = "dataContainer colorContainer">
+			<div class = "colorData">line color</div>
+			<input type="color" class = "color"  value = "#aaaaaa" id = "lineColorInput">
+		</div>
+
+<hr>
+		<div class = "dataContainer">
+			<div id = sliderOneData>Ball Max Size</div>
+			<input type="range" min="1", max = "5000" value = "500" class = "slider" id = "ballSizeInput">
+		</div>
+		<div class = "dataContainer">
+			<div id = sliderTwoData>Line Thickness</div>
+			<input type="range" min="0", max = "1000" value = "100" class = "slider" id = "lineThicknessInput">
+		</div>
+
+		<div class = "dataContainer">
+			<div id = sliderThreeData>Ball Speed</div>
+			<input type="range" min="0", max = "1000" value = "500" class = "slider" id = "ballSpeedInput">
+		</div>
+
+		<div class = "dataContainer">
+			<div id = sliderThreeData>Max Line Length</div>
+			<input type="range" min="0", max = "1000" value = "500" class = "slider" id = "maxLineInput">
+		</div>
+
+
+		
+	</div>
+	
+
+	<!-- number of dots -->
+	<!-- dots appear or not -->
+	<!-- lines appear or not -->
+	<!-- background color -->
+	<!-- dots color -->
+	<!-- line color -->
+	<!-- line thickness -->
+	<!-- ball size -->
+	<!-- word to make -->
+	<!-- speed of balls -->
+	<!-- reset -->
+	<!-- start -->
+
 	
 
 	<script type="text/javascript" src = "words.js"></script>
