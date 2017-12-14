@@ -10,8 +10,13 @@
 	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	  crossorigin="anonymous">
 	</script>
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+
+
 </head>
 <body >
+	<div id = "wordsCanvasContainer">
 	<canvas id = "backgroundCanvas"></canvas>
 	<canvas id = "wordsCanvas"></canvas>	
 	
@@ -19,8 +24,8 @@
 	<div class = "settingsContainer">
 
 	
-		<input type="button" value = "reset" class = "button reset" id = "resetButton">
-		<input type="button" value = "start" class = "button start" id = "startButton">
+		<input type="button" value = "RESET" class = "button reset" id = "resetButton">
+		
 	
 	
 
@@ -31,7 +36,7 @@
 
 		<div class = "dataContainer textContainer">
 			<div class = "numberData">Number of dots created</div>
-			<input type="text" class = "numberDots text" value = "200" id = "numberInput">
+			<input type="text" class = "numberDots text" value = "1000" id = "numberInput">
 		</div>
 <hr>
 
@@ -47,59 +52,48 @@
 
 <hr>
 		<div class = "dataContainer colorContainer">
-			<div class = "colorData">background color</div>
+			<div class = "colorData">background</div>
 			<input type="color" class = "color"  value = "#aaaaaa" id = "backgroundColorInput">
 		</div>
-	<hr>
+	
 		<div class = "dataContainer colorContainer">
-			<div class = "colorData">ball color</div>
-			<input type="color" class = "color"  value = "#aaaaaa" id = "ballColorInput">
+			<div class = "colorData">balls</div>
+			<input type="color" class = "color"  value = "#2460c1" id = "ballColorInput">
 		</div>
-		<hr>
+	
 			<div class = "dataContainer colorContainer">
-			<div class = "colorData">line color</div>
-			<input type="color" class = "color"  value = "#aaaaaa" id = "lineColorInput">
+			<div class = "colorData">lines</div>
+			<input type="color" class = "color"  value = "#494949" id = "lineColorInput">
 		</div>
 
 <hr>
 		<div class = "dataContainer">
 			<div id = sliderOneData>Ball Max Size</div>
-			<input type="range" min="1", max = "5000" value = "500" class = "slider" id = "ballSizeInput">
+			<input type="range" min="1", max = "5000" value = "50" class = "slider" id = "ballSizeInput">
 		</div>
 		<div class = "dataContainer">
 			<div id = sliderTwoData>Line Thickness</div>
-			<input type="range" min="0", max = "1000" value = "100" class = "slider" id = "lineThicknessInput">
+			<input type="range" min="0", max = "1000" value = "8" class = "slider" id = "lineThicknessInput">
 		</div>
 
 		<div class = "dataContainer">
 			<div id = sliderThreeData>Ball Speed</div>
-			<input type="range" min="0", max = "1000" value = "500" class = "slider" id = "ballSpeedInput">
+			<input type="range" min="0", max = "1000" value = "30" class = "slider" id = "ballSpeedInput">
 		</div>
 
 		<div class = "dataContainer">
 			<div id = sliderThreeData>Max Line Length</div>
-			<input type="range" min="0", max = "1000" value = "500" class = "slider" id = "maxLineInput">
+			<input type="range" min="0", max = "1000" value = "320" class = "slider" id = "maxLineInput">
 		</div>
 
 
 		
 	</div>
-	
+	<div id = "settingsButton"><i class="fas fa-cog settingsIcon"></i></div>
 
-	<!-- number of dots -->
-	<!-- dots appear or not -->
-	<!-- lines appear or not -->
-	<!-- background color -->
-	<!-- dots color -->
-	<!-- line color -->
-	<!-- line thickness -->
-	<!-- ball size -->
-	<!-- word to make -->
-	<!-- speed of balls -->
-	<!-- reset -->
-	<!-- start -->
 
-	
+	</div>
+
 
 	<script type="text/javascript" src = "words.js"></script>
 

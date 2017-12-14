@@ -2,6 +2,7 @@ body{
 	margin:0;
 	overflow:hidden;
 	color:white;
+	font-size:.8em;
 }
 hr{
 	border:none;
@@ -45,16 +46,16 @@ hr{
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%; 
     background: #4CAF50;
     cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: #4CAF50;
     cursor: pointer;
@@ -63,31 +64,35 @@ hr{
 .settingsContainer{
 	position:absolute;
 	border-left:2px solid black;
+	overflow:hidden;
 	top:0;
-	bottom:100vh;
-	left:80vw;
+	bottom:100%;
+	left:100%;
 	background:rgba(0,0,0,.3);
 	z-index:100;
 	height:100%;
 	width:20%;
-}
+	-webkit-transition:left 1s, width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition:left 1s, width 2s, height 2s, background-color 2s, transform 2s;
+}	
 
 .dataContainer{
 	width:80%;
 	padding-left:10%;
-	padding-top:5%;
+	padding-top:7%;
 	
 }
 
 .button{
-	width:40%;
+	width:60%;
 	float:left;
-	margin:5%;
+	margin:20%;
 	border-radius:5px;
 	border:none;
 	padding:5px;
 	font-size:1rem;
-	
+	margin-top:2%;
+	margin-bottom:2%;
 }
 
 .button:focus{
@@ -100,6 +105,8 @@ hr{
 
 .reset{
 	background:#1cb14b;
+	margin-top:10px;
+	font-size:.6rem;
 }
 
 .numberData{
@@ -112,6 +119,7 @@ hr{
 	border:1px solid white;
 	padding:3px;
 	border-radius:5px;
+	font-size:.7rem;
 	/*color:white;*/
 }
 
@@ -128,7 +136,7 @@ hr{
 }
 
 .checkContainer{
-
+	padding-top:3%;
 	overflow:hidden;
 }
 
@@ -140,10 +148,47 @@ hr{
 }
 
 .color{
-float:left;
+	float:left;
+	width:20%;
+	height:18px;
+	border-radius:4px;
+	border:none;
 }
 
 .colorContainer{
 	overflow:hidden;
-	padding-top:20px;
+	padding-top:1%;
+}
+
+
+
+#wordsCanvasContainer{
+	width:80vw;
+	height:80vh;
+	position:relative;
+	float:left;
+	margin-left:10vw;
+	margin-top:10vh;
+	overflow:hidden;
+	border:.7px solid black;
+	border-radius:2px;
+}
+
+.settingsIcon{
+
+	/*float:right;*/
+	color:rgba(0,0,0,.34);
+	font-size:2em;
+	
+}
+
+#settingsButton{
+	position:absolute;
+	padding:1%;
+	cursor:pointer;
+	top:1%;
+	right:1%;
+	z-index:100;
+	-webkit-transition:left 1s, transform .4s, right 1s, width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition:left 1s, right 1s, transform .4s, width 2s, height 2s, background-color 2s, transform 2s;
 }
